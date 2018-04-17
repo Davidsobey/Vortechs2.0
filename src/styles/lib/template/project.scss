@@ -1,0 +1,43 @@
+.card-container {
+  background-color: white;
+  padding: 2rem 5rem;
+  position: relative;
+  width: 90%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px auto;
+  @media (max-width: $screen-md) {
+    padding: 2rem;
+  }
+  &.card-container-lg {
+    @media (max-width: $screen-md) {
+      width: 95%;
+      padding: 2rem 3em;
+    }
+  }
+}
+
+.image-project-hover {
+  display: block;
+  img {
+    @include transition(all 0.1s linear);
+    &:hover {
+      filter: brightness(155%);
+    }
+    @media (max-width: $screen-md) {
+      filter: none;
+    }
+  }
+}
+
+.projects-carousel {
+  @media (max-width: $screen-sm) {
+    .carousel-control {
+      display: none;
+    }
+    .carousel-inner > .item {
+      display: block;
+    }
+  }
+}
+
