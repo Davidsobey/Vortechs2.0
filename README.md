@@ -1,8 +1,4 @@
-# Mashup Template
-
-Mashup Template is a collection of Beautiful HTML5 templates based on pre-built Blocks to create a website in minutes. All Mashup Templates are responsive design , fully customisable and can be use for any commercial project as you wish.
-
-Check out here: [mashup-template.com](http://mashup-template.com)
+# Vortechs
 
 ## Features
 
@@ -30,7 +26,7 @@ npm install
 With live reload and all others features usefull for developpement
 
 ```sh
-npm run dev
+npm start
 ```
 
 The app is available on [localhost:5000](http://localhost:5000)
@@ -40,7 +36,7 @@ The app is available on [localhost:5000](http://localhost:5000)
 Optimize for production
 
 ```sh
-npm start
+npm build
 ```
 
 The app is available on [localhost:5000](http://localhost:5000)
