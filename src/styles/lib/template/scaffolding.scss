@@ -50,7 +50,8 @@ body {
   height: 100vh;
 
   h1 {
-    font-weight: 100;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 900;
   }
   .hero-full-wrapper {
     display: table;
@@ -71,7 +72,7 @@ body {
   h4,
   h5,
   p {
-    text-shadow: 0 1px 3px $gray-base;
+    text-shadow: 3px 4px 7px #1675bb;
     color: white;
   }
   a {
@@ -86,8 +87,12 @@ body {
   h4,
   h5,
   p {
-    text-shadow: 4px 4px 6px #075fff;
-    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #202020;
+    letter-spacing: 0.1em;
+    font-size: 50px;
   }
   a {
     color: white;
@@ -127,4 +132,6 @@ body {
   left: 0;
   z-index: -1;
   filter: opacity(50%);
+  width: 100vh;
+  height: 100vh;
 }

@@ -6,13 +6,14 @@
   border: 1px solid black;
   border-radius: 5px;
   margin: 10px auto;
+  min-width: 215px;
+  min-height: 280px;
   @media (max-width: $screen-md) {
     padding: 2rem;
   }
   &.card-container-lg {
     @media (max-width: $screen-md) {
       width: 95%;
-      padding: 2rem 3em;
     }
   }
 }
@@ -40,4 +41,3 @@
     }
   }
 }
-

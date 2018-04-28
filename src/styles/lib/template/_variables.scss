@@ -11,10 +11,10 @@ $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
 $gray: lighten($gray-base, 33.5%) !default; // #555
-$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-light: #ffffff !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary: #001AFF !default; // #337ab7
+$brand-primary: #001aff !default; // #337ab7
 $brand-success: #5cb85c !default;
 $brand-info: #5bc0de !default;
 $brand-warning: #f0ad4e !default;
@@ -25,7 +25,7 @@ $brand-danger: #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg: #fff !default;
+$body-bg: #040404 !default;
 //** Global text color on `<body>`.
 $text-color: $gray-base !default;
 
@@ -40,10 +40,10 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Roboto Mono", Helvetica, Arial, sans-serif !default;
-$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: 'Roboto Mono', Helvetica, Arial, sans-serif !default;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;
 
 $font-size-base: 11px !default;
@@ -60,7 +60,9 @@ $font-size-h6: ceil(($font-size-base * 0.85)) !default; // ~12px
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base: 1.78 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed: floor(
+  ($font-size-base * $line-height-base)
+) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family: $font-family-sans-serif !default;
@@ -76,12 +78,16 @@ $headings-color: $gray-base !default;
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
+$icon-font-path: if(
+  $bootstrap-sass-asset-helper,
+  'bootstrap/',
+  '../fonts/bootstrap/'
+) !default;
 
 //** File name for all font files.
-$icon-font-name: "glyphicons-halflings-regular" !default;
+$icon-font-name: 'glyphicons-halflings-regular' !default;
 //** Element ID within SVG icon file.
-$icon-font-svg-id: "glyphicons_halflingsregular" !default;
+$icon-font-svg-id: 'glyphicons_halflingsregular' !default;
 
 //== Components
 //
@@ -158,7 +164,7 @@ $btn-info-color: $brand-info !default;
 $btn-info-bg: transparent !default;
 $btn-info-border: $brand-info !default;
 
-$btn-warning-color:$brand-warning !default;
+$btn-warning-color: $brand-warning !default;
 $btn-warning-bg: transparent !default;
 $btn-warning-border: $brand-warning !default;
 
@@ -205,9 +211,15 @@ $input-color-placeholder: #999 !default;
 //** Default `.form-control` height
 $input-height-base: 40px !default;
 //** Large `.form-control` height
-$input-height-large: (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-large: (
+  ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) +
+    2
+) !default;
 //** Small `.form-control` height
-$input-height-small: (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-small: (
+  floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) +
+    2
+) !default;
 
 //** `.form-group` margin
 $form-group-margin-bottom: 15px !default;
@@ -230,7 +242,7 @@ $cursor-disabled: not-allowed !default;
 //** Background for the dropdown menu.
 $dropdown-bg: #fff !default;
 //** Dropdown menu `border-color`.
-$dropdown-border: rgba(0, 0, 0, .15) !default;
+$dropdown-border: rgba(0, 0, 0, 0.15) !default;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border: #ccc !default;
 //** Divider color for between dropdown items.
@@ -352,7 +364,9 @@ $navbar-height: 20px !default;
 $navbar-margin-bottom: $line-height-computed !default;
 $navbar-border-radius: $border-radius-base !default;
 $navbar-padding-horizontal: floor(($grid-gutter-width / 2)) !default;
-$navbar-padding-vertical: (($navbar-height - $line-height-computed) / 2) !default;
+$navbar-padding-vertical: (
+  ($navbar-height - $line-height-computed) / 2
+) !default;
 $navbar-collapse-max-height: 340px !default;
 
 $navbar-default-color: #777 !default;
@@ -370,7 +384,10 @@ $navbar-default-link-disabled-bg: transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color: $navbar-default-link-color !default;
-$navbar-default-brand-hover-color: darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-color: darken(
+  $navbar-default-brand-color,
+  10%
+) !default;
 $navbar-default-brand-hover-bg: transparent !default;
 
 // Navbar toggle
@@ -481,7 +498,7 @@ $jumbotron-heading-font-size: ceil(($font-size-base * 4.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text: #FFF !default;
+$state-success-text: #fff !default;
 $state-success-bg: #000 !default;
 $state-success-border: darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
@@ -493,8 +510,8 @@ $state-warning-text: #8a6d3b !default;
 $state-warning-bg: #fcf8e3 !default;
 $state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text: #FFF !default;
-$state-danger-bg: #FF0000 !default;
+$state-danger-text: #fff !default;
+$state-danger-bg: #ff0000 !default;
 $state-danger-border: $state-danger-bg !default;
 
 //== Tooltips
@@ -507,7 +524,7 @@ $tooltip-max-width: 200px !default;
 $tooltip-color: #fff !default;
 //** Tooltip background color
 $tooltip-bg: #000 !default;
-$tooltip-opacity: .9 !default;
+$tooltip-opacity: 0.9 !default;
 
 //** Tooltip arrow width
 $tooltip-arrow-width: 5px !default;
@@ -523,7 +540,7 @@ $popover-bg: #fff !default;
 //** Popover maximum width
 $popover-max-width: 276px !default;
 //** Popover border color
-$popover-border-color: rgba(0, 0, 0, .2) !default;
+$popover-border-color: rgba(0, 0, 0, 0.2) !default;
 //** Popover fallback border color
 $popover-fallback-border-color: #ccc !default;
 
@@ -540,7 +557,10 @@ $popover-arrow-outer-width: ($popover-arrow-width + 1) !default;
 //** Popover outer arrow color
 $popover-arrow-outer-color: fade_in($popover-border-color, 0.05) !default;
 //** Popover outer arrow fallback color
-$popover-arrow-outer-fallback-color: darken($popover-fallback-border-color, 20%) !default;
+$popover-arrow-outer-fallback-color: darken(
+  $popover-fallback-border-color,
+  20%
+) !default;
 
 //== Labels
 //
@@ -579,14 +599,14 @@ $modal-title-line-height: $line-height-base !default;
 //** Background color of modal content area
 $modal-content-bg: #fff !default;
 //** Modal content border color
-$modal-content-border-color: rgba(0, 0, 0, .2) !default;
+$modal-content-border-color: rgba(0, 0, 0, 0.2) !default;
 //** Modal content border color **for IE8**
 $modal-content-fallback-border-color: #999 !default;
 
 //** Modal backdrop background color
 $modal-backdrop-bg: #000 !default;
 //** Modal backdrop opacity
-$modal-backdrop-opacity: .5 !default;
+$modal-backdrop-opacity: 0.5 !default;
 //** Modal header border color
 $modal-header-border-color: #e5e5e5 !default;
 //** Modal footer border color
@@ -769,17 +789,17 @@ $breadcrumb-color: #ccc !default;
 //** Text color of current page in the breadcrumb
 $breadcrumb-active-color: $gray-light !default;
 //** Textual separator for between breadcrumb elements
-$breadcrumb-separator: "/" !default;
+$breadcrumb-separator: '/' !default;
 
 //== Carousel
 //
 //##
 
-$carousel-text-shadow: 0 1px 2px rgba(0, 0, 0, .6) !default;
+$carousel-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6) !default;
 
 $carousel-control-color: #fff !default;
 $carousel-control-width: 15% !default;
-$carousel-control-opacity: .5 !default;
+$carousel-control-opacity: 0.5 !default;
 $carousel-control-font-size: 20px !default;
 
 $carousel-indicator-active-bg: #fff !default;

@@ -24,15 +24,41 @@ function importAll(r) {
 var particles = particlesjs.init({
   selector: '.background',
   connectParticles: true,
-  speed: 0.3,
-  maxParticles: 200,
-  color: ['#0e70b7', '#404B69', '#0e70b7', '#404B69'],
+  maxParticles: 300,
+  sizeVariations: 1,
+  color: [
+    '#1677BB',
+    '#ffffff',
+    '#398AC3',
+    '#000000',
+    '#075D99',
+    '#1677BB',
+    '#ffffff',
+  ],
   minDistance: 150,
   responsive: [
     {
-      breakpoint: 1080,
+      breakpoint: 1500,
       options: {
-        maxParticles: 48,
+        speed: 0.75,
+        minDistance: 120,
+        maxParticles: 200,
+      },
+    },
+    {
+      breakpoint: 1200,
+      options: {
+        speed: 0.75,
+        minDistance: 110,
+        maxParticles: 150,
+      },
+    },
+    {
+      breakpoint: 900,
+      options: {
+        speed: 1,
+        minDistance: 175,
+        maxParticles: 30,
       },
     },
   ],

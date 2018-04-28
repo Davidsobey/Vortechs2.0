@@ -443,7 +443,7 @@
     border-color: $navbar-default-toggle-border-color;
     &:hover,
     &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
+      background-color: transparent;
     }
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
@@ -452,7 +452,7 @@
 
   .navbar-collapse,
   .navbar-form {
-    border-color: $navbar-default-border;
+    border-color: transparent;
   }
 
   // Dropdown menu items
@@ -578,7 +578,7 @@
     border-color: $navbar-inverse-toggle-border-color;
     &:hover,
     &:focus {
-      background-color: $navbar-inverse-toggle-hover-bg;
+      background-color: transparent;
     }
     .icon-bar {
       background-color: $navbar-inverse-toggle-icon-bar-bg;
@@ -587,7 +587,7 @@
 
   .navbar-collapse,
   .navbar-form {
-    border-color: darken($navbar-inverse-bg, 7%);
+    border-color: transparent;
   }
 
   // Dropdowns

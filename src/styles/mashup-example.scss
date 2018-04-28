@@ -38,17 +38,44 @@
 }
 
 .about-us-div {
-  border-top: 1px solid black;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   border-radius: 10px;
-  margin: 20px;
-  &:hover,
-  h3 {
-    font-weight: 700;
-    color: #1675bb !important;
-  }
+  margin: 30px;
+}
+
+.about-us-div:hover p {
+  color: #1675bb;
+}
+
+.about-us-div:hover h3 {
+  color: #1675bb;
+}
+
+.about-us-div:hover i {
+  color: #1675bb;
 }
 
 .center-div {
   display: flex;
   justify-content: center;
+}
+
+.white-button {
+  color: white;
+  border: 1px solid white;
+}
+
+.white {
+  color: white;
+}
+
+.blue-hover:hover {
+  color: #1675bb;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
